@@ -5,6 +5,16 @@ var schema = require("./graphql/schema")
 var indexRoute = require("./routes/indexRoute")
 var restRoute = require("./routes/restRoute")
 
+//enable CORS
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  )
+  next()
+})
+
 app.get("/", indexRoute)
 app.get("/user", restRoute)
 
