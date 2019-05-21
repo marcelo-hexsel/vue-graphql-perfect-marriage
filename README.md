@@ -11,8 +11,22 @@ cd server
 npm install
 ```
 
-### Usage
+### Running
 
 ```bash
 npm start
+```
+
+## Client-side
+
+### Instalation
+
+```bash
+npm install
+```
+
+### Running
+
+```bash
+npm run serve
 ```
