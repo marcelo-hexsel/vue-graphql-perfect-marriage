@@ -9,6 +9,7 @@ This is a sample that shows the perfect marriage between VueJS and GraphQL
 ```bash
 cd server
 npm install
+npm install -g nodemon
 ```
 
 ### Running
