@@ -22,6 +22,8 @@ const typeDefs = gql`
     User name
     """
     name: String
+    age: Int
+    responsible: User
   }
 `
 
@@ -40,6 +42,13 @@ const resolvers = {
           return f.name.includes(nameSearch)
         })
       )
+    }
+  },
+  User: {
+    responsible: obj => {
+      if (obj.responsible)
+        return Promise.resolve(users.find(f => f.id === obj.responsible))
+      return null
     }
   }
 }
